@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<title>LOVE💙</title>
+<link rel="stylesheet" href="sn.css">
+</head>
+<body>
+
+<header>
+    <h1>Just for you</h1>
+</header>
+
+<div class="container">
+  <div class="box" data-img="ảnh/1.jpg" data-title="Dấu ấn độc nhất💙" data-desc="Chúc em sinh nhật thật vui, luôn xinh đẹp, rạng rỡ và tràn đầy năng lượng tích cực.">1</div>
+  <div class="box" data-img="ảnh/2.jpg" data-title="Rực rỡ ánh hào quang☀️" data-desc="Chúc em luôn thuận lợi đạt được ước mơ, hoài bão của bản thân.">2</div>
+  <div class="box" data-img="ảnh/3.jpg" data-title="Tuổi trẻ cháy hết mình🔥" data-desc="Mong em luôn mạnh mẽ, may mắn trên con đường thanh xuân tươi đẹp phía trước.">3</div>
+  <div class="box" data-img="ảnh/4.jpg" data-title="Tỏa sáng như ánh nắng☀️" data-desc="Chúc em luôn được yêu thương dịu dàng, như cách anh luôn dành trái tim mình cho em.">4</div>
+  <div class="box" data-img="ảnh/5.jpg" data-title="LOVE💙" data-desc="Nếu thanh xuân là một hành trình, anh mong được trưởng thành cùng em trên suốt chặng đường đó.">5</div>
+  <div class="box" data-img="ảnh/6.jpg" data-title="Tuổi 20🍉" data-desc="Chúc em có tuổi đôi mươi mềm mại trong tâm hồn, vững vàng trong ước mơ.">6</div>
+</div>
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <img id="overlayImg">
+    <div class="info">
+      <div class="info-box">
+        <h2 id="title"></h2>
+        <p id="desc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<button id="openPuzzle" class="btn">Secret</button>
+
+<!-- PUZZLE -->
+<div id="puzzle" class="puzzle hidden">
+  <div class="cells">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+    <input maxlength="1">
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div id="videoBox" class="video-box hidden">
+  <audio id="audioPlayer" src="ảnh/Tâm sự sinh nhật.mp3" controls></audio>
+</div>
+
+<script src="sn.js"></script>
+<div class="floating-effects">
+  <!-- TIM -->
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+  <span class="heart"></span>
+
+  <!-- SAO -->
+  <span class="star"></span>
+  <span class="star"></span>
+  <span class="star"></span>
+  <span class="star"></span>
+  <span class="star"></span>
+</div>
+</body>
+</html>
