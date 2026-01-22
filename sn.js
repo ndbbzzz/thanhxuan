@@ -46,14 +46,23 @@ inputs.forEach((input, index) => {
     }
 
     // ghép chữ
-    let value = "";
-    inputs.forEach(i => value += i.value);
+   let value = "";
+inputs.forEach(i => value += i.value);
 
-    // đúng → hiện video như box
-    if (value === answer) {
-      puzzle.classList.add("hidden");
-      videoBox.classList.remove("hidden");
-      audioPlayer.play();
-    }
+// khi nhập đủ 9 chữ
+if (value.length === answer.length) {
+  if (value === answer) {
+    puzzle.classList.add("hidden");
+    videoBox.classList.remove("hidden");
+    audioPlayer.play();
+  } else {
+    alert("Sai rồi 😝 thử lại nhé! Gơi ý nè: A song");
+
+    // reset puzzle
+    inputs.forEach(i => i.value = "");
+    inputs[0].focus();
+  }
+}
   });
+
 });
