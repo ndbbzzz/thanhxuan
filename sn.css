@@ -8,7 +8,7 @@
 body{
     min-height:100vh;
     background: url("backgala.jpg") center / cover no-repeat fixed;
-     cursor: url("pig.png") 16 16, auto;
+     cursor: url("pig.png") 24 24, auto;
 }
 
 header{
@@ -267,5 +267,6 @@ header{
 .star:nth-child(12){top:65%; left:70%;}
 
 .star:nth-child(13){top:15%; left:80%;}
+
 
 
