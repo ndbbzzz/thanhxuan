@@ -36,8 +36,12 @@ openPuzzle.onclick = () => {
 };
 
 // nhập chữ
+let locked = false; // khóa khi alert hiện
+
 inputs.forEach((input, index) => {
   input.addEventListener("input", () => {
+    if (locked) return;
+
     input.value = input.value.toUpperCase();
 
     // tự nhảy ô
@@ -45,24 +49,26 @@ inputs.forEach((input, index) => {
       inputs[index + 1].focus();
     }
 
-    // ghép chữ
-   let value = "";
-inputs.forEach(i => value += i.value);
+    // ghép chữ (chỉ tính ô đã nhập)
+    let value = "";
+    inputs.forEach(i => value += i.value);
 
-// khi nhập đủ 9 chữ
-if (value.length === answer.length) {
-  if (value === answer) {
-    puzzle.classList.add("hidden");
-    videoBox.classList.remove("hidden");
-    audioPlayer.play();
-  } else {
-    alert("Sai rồi 😝 thử lại nhé! Gơi ý nè: A song");
+    // chỉ kiểm tra khi đủ số chữ
+    if (value.length === answer.length) {
+      if (value === answer) {
+        puzzle.classList.add("hidden");
+        videoBox.classList.remove("hidden");
+        audioPlayer.play();
+      } else {
+        locked = true;
+        alert("❌ Sai rồi 😝 thử lại nhé!\n💡 Gợi ý: A song");
 
-    // reset puzzle
-    inputs.forEach(i => i.value = "");
-    inputs[0].focus();
-  }
-}
+        // reset puzzle
+        inputs.forEach(i => i.value = "");
+        inputs[0].focus();
+        locked = false;
+      }
+    }
   });
-
 });
+
